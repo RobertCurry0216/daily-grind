@@ -10,7 +10,7 @@ function main() {
 
   // score
   const score = params.get("s") || "N/A";
-  const diff = params.get("m") ? diff_names[params.get("m")] : "N/A";
+  const diff = params.get("c") ? diff_names[params.get("c")] : "N/A";
   const score_text = `${diff} : ${score}`;
 
   // attempts
