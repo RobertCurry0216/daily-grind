@@ -6,7 +6,7 @@ function main() {
   const year = params.get("y") || "N/A";
   const month = params.get("m") || 0;
   const day = params.get("d") || 0;
-  const title_text = `Daily Grind : ${year}-${month}-${day}`;
+  const title_text = `Daily Grind - ${year}-${month}-${day}`;
 
   // score
   const score = params.get("s") || "N/A";
@@ -17,16 +17,13 @@ function main() {
   let grade_text = "";
   const attempts = params.get("a") || 999;
 
-  if (attempts > 5) {
+  if (attempts > 10) {
     grade_text = `${attempts}❌ ☕`;
   } else {
-    for (let i = 1; i <= 5; i++) {
-      if (i >= attempts) {
-        grade_text = `${grade_text}☕`;
-      } else {
-        grade_text = `${grade_text}❌`;
-      }
+    for (let i = 0; i < attempts; i++) {
+      grade_text = `${grade_text}❌`;
     }
+    grade_text = `${grade_text} ☕`;
   }
 
   document.getElementById("title").innerHTML = title_text;
@@ -40,7 +37,7 @@ function main() {
     );
     document.getElementById("btn_copy").innerHTML = "Copied!";
   };
-  document.getElementById("btn_copy").onclick = copy;
+  document.getElementById("btn_ copy").onclick = copy;
 }
 
 main();
