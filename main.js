@@ -37,7 +37,7 @@ function main() {
     );
     document.getElementById("btn_copy").innerHTML = "Copied!";
   };
-  document.getElementById("btn_ copy").onclick = copy;
+  document.getElementById("btn_copy").onclick = copy;
 }
 
 main();
