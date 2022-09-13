@@ -19,8 +19,10 @@ function main() {
 
   if (attempts > 10) {
     grade_text = `${attempts}❌ ☕`;
+  } else if (attempts === 1) {
+    grade_text = "☕";
   } else {
-    for (let i = 0; i < attempts; i++) {
+    for (let i = 1; i < attempts; i++) {
       grade_text = `${grade_text}❌`;
     }
     grade_text = `${grade_text} ☕`;
